@@ -1,14 +1,14 @@
 import asyncio
-from astrbot.api.event import filter, AstrMessageEvent
+from astrbot.api.event import filter, AstrMessageEvent, MessageChain
 from astrbot.api.provider import ProviderRequest
 from astrbot.api.star import Star, register, Context
 from astrbot.api import logger
-from astrbot.api.message_components import Plain, At, MessageChain
+from astrbot.api.message_components import Plain, At
 
 # 全局锁：任何对话、任何提供商都串行
 LLM_LOCK = asyncio.Lock()
 
-@register("llm_lock", "kerinri", "LLM 调用独占锁，防止并发卡顿", "1.0.0")
+@register("llm_lock", "YourName", "LLM 调用独占锁，防止并发卡顿", "1.0.0")
 class LlmLockPlugin(Star):
     def __init__(self, context: Context):
         super().__init__(context)
