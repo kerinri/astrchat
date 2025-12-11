@@ -3,4 +3,4 @@ display_name: Chat 指令独占锁
 desc: 防止 /chat 并发请求造成卡顿，被占用时立即 @提醒发送者
 version: v1.0.0
 author: YourName
-repo: https://github.com/yourname/astrbot_plugin_chatlock
+repo: https://github.com/kerinri/astrchat
